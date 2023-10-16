@@ -46,9 +46,8 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.add),
         onPressed: () {
-          number = _gerarNumeroAleatorio();
           setState(() {
-            number;
+            number = _gerarNumeroAleatorio();
           });
         },
       ),
