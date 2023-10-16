@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,25 +11,46 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HonmePage(),
+      theme: ThemeData(
+        primarySwatch: Colors.brown,
+      ),
+      home: const HomePage(),
     );
   }
 }
 
-class HonmePage extends StatefulWidget {
-  const HonmePage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<HonmePage> createState() => _HonmePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HonmePageState extends State<HonmePage> {
+class _HomePageState extends State<HomePage> {
+
+  var number = 0;
+
+  int _gerarNumeroAleatorio() {
+    Random numeroAleatorio = Random();
+    return numeroAleatorio.nextInt(1000);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text ("Meu App")
+      ),
+      body: Center(child: Text (number.toString())),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () {
+          number = _gerarNumeroAleatorio();
+          setState(() {
+            number;
+          });
+        },
       ),
     );
   }
