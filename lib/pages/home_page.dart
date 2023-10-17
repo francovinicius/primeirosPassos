@@ -24,18 +24,50 @@ class _HomePageState extends State<HomePage> {
       ),
       ),
       body: Column(
+
+        // Horizontal
+        crossAxisAlignment: CrossAxisAlignment.center,
+        // Vertical
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-
           Center(
               child: Text (
-                  "Foi clicado $quantCliques"
+                  "Foi clicado $quantCliques vezes."
               )),
-
           Center(
               child: Text (
                   number.toString()
               )),
+          Row(
+            children: [
+              Expanded(
+                flex: 2,
+                child: Container(
+                  color: Colors.red,
+                  child: Text (
+                      number.toString()
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  color: Colors.blue,
+                  child: Text (
+                      number.toString()
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  color: Colors.yellow,
+                  child: Text (
+                      number.toString()
+                  ),
+                ),
+              )
+            ],
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
