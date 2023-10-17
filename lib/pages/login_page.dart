@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 200,
             ),
             Container(
-              margin: EdgeInsets.only(top: 50),
+              margin: const EdgeInsets.only(top: 50),
               width: 150,
               height: 150,
               color: Colors.amber,
@@ -31,7 +31,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Container(
               width: double.infinity,
-              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               //margin: const EdgeInsets.only(left: 10, right: 10, top: 50, bottom: 10),
               color: Colors.white,
               height: 30,
@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Container(
               width: double.infinity,
-              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               //margin: const EdgeInsets.only(left: 10, right: 10, top: 50, bottom: 10),
               color: Colors.white,
               height: 30,
@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Container(
               width: double.infinity,
-              margin: EdgeInsets.symmetric(horizontal: 10, vertical: 90),
+              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 90),
               //margin: const EdgeInsets.only(left: 10, right: 10, top: 50, bottom: 10),
               color: Colors.white,
               height: 30,
