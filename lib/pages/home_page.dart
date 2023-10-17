@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:primeiros_passos/services/gerador_numero_aleatorio_service.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,7 +16,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text ("Meu App")
+      appBar: AppBar(
+        title: Text (
+          "Meu App",
+          style: GoogleFonts.pacifico(),
+      ),
       ),
       body: Center(child: Text (number.toString())),
       floatingActionButton: FloatingActionButton(
